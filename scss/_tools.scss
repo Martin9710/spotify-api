@@ -1,0 +1,12 @@
+// Variables
+$font-primary: "Pattaya", sans-serif;
+$font-secondary: "Montserrat", sans-serif;
+
+// Mixins
+
+// Responsive
+@mixin responsive($width: 480px) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}

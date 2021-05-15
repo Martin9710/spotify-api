@@ -1,0 +1,5 @@
+// Tools ligger överst för här kommer variabler ligga
+@import 'scss/tools';       //variables, Mixins, etc
+@import 'scss/base';        // Base styling, HTML, body, Typgraphy
+@import 'scss/components';  // Buttons, sliders etc
+@import 'scss/layout';      // Main layout and structure of site

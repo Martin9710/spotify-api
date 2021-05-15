@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  background: rgb(250, 211, 191);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 211, 191, 1) 0%,
+    rgba(247, 180, 147, 1) 62%,
+    rgba(235, 147, 104, 1) 100%
+  );
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.container {
+  margin-top: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 3.5rem;
+}
+
+.generated {
+  margin-bottom: 3.5rem;
+  font-size: 1.5rem;
+  font-family: $font-secondary;
+}
