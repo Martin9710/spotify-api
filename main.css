@@ -1,6 +1,6 @@
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -9,7 +9,14 @@ body {
   padding: 0;
   font-family: "Pattaya", sans-serif;
   background: #fad3bf;
-  background: -webkit-gradient(linear, left top, right top, from(#fad3bf), color-stop(62%, #f7b493), to(#eb9368));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#fad3bf),
+    color-stop(62%, #f7b493),
+    to(#eb9368)
+  );
   background: linear-gradient(90deg, #fad3bf 0%, #f7b493 62%, #eb9368 100%);
 }
 
@@ -25,15 +32,15 @@ img {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .title {
@@ -53,8 +60,8 @@ img {
   position: relative;
   padding: 1.5em 3em;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: 0;
   background: transparent;
   color: #cf5241;
@@ -65,7 +72,7 @@ img {
   font-weight: bold;
   border-radius: 0;
   -webkit-box-shadow: inset 0 0 0 var(--border-size) currentcolor;
-          box-shadow: inset 0 0 0 var(--border-size) currentcolor;
+  box-shadow: inset 0 0 0 var(--border-size) currentcolor;
   -webkit-transition: background 0.8s ease;
   transition: background 0.8s ease;
 }
