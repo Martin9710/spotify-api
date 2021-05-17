@@ -1,10 +1,11 @@
 //Variables
 
-var redirect_uri = "http://127.0.0.1:5500/index.html";
-var client_id = "b2556024225445c49d82d2b2f0a1bfba";
-var client_secret = "--------";
+let redirect_uri = "http://127.0.0.1:5500/index.html";
+let client_id = "----";
+let client_secret = "----";
 const AUTHORIZE = "https://accounts.spotify.com/authorize";
 const TOKEN = "https://accounts.spotify.com/api/token";
+const artistsList = document.querySelector(".artists_list");
 
 function onPageLoad() {
   if (window.location.search.length > 0) {
@@ -13,8 +14,8 @@ function onPageLoad() {
 }
 // Generate a url to request access to the API, this will redirect the user when pressing the Generate button.
 function requestAuthorization() {
-  client_id = "b2556024225445c49d82d2b2f0a1bfba";
-  client_secret = "96087c62d9c442cbb5772f45fbf8311d";
+  client_id = "----";
+  client_secret = "----";
   let url = AUTHORIZE;
   url += "?client_id=" + client_id;
   url += "&response_type=code";
@@ -82,7 +83,7 @@ function handleAuthorizationResponse() {
   }
 }
 
-function getArtits() {
+function getArtists() {
   fetch(
     "https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10",
     {
@@ -96,16 +97,11 @@ function getArtits() {
   ).then((response) => {
     console.log(
       response.json().then((data) => {
-        console.log(data.items[0].name);
-        console.log(data.items[1].name);
-        console.log(data.items[2].name);
-        console.log(data.items[3].name);
-        console.log(data.items[4].name);
-        console.log(data.items[5].name);
-        console.log(data.items[6].name);
-        console.log(data.items[7].name);
-        console.log(data.items[8].name);
-        console.log(data.items[9].name);
+        const createListItem = document.createElement("li");
+        createListItem.classList.add("test");
+        createListItem.innerText = data.items[1].name;
+
+        artistsList.appendChild(createListItem);
       })
     );
   });
